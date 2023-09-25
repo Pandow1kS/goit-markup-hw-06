@@ -62,14 +62,79 @@
       <section class="section-first">
         <div class="container">
           <h1>Ефективні рішення для вашого бізнесу</h1>
-          <button data-modal-open type="button">Замовити послугу</button>
+          <button class="first-button" data-modal-open type="button">
+            Замовити послугу
+          </button>
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-              <button data-modal-close>
+              <button class="modal-button" data-modal-close>
                 <svg>
                   <use href="./sprite.svg#close"></use>
                 </svg>
               </button>
+              <h2>Залиште свої дані, ми вам передзвонимо</h2>
+              <form class="modal-form">
+                <label class="form-box" for="name"
+                  >Ім'я
+                  <span class="input-field">
+                    <input type="text" id="name" name="name" />
+                    <svg>
+                      <use href="./sprite.svg#name"></use>
+                    </svg>
+                  </span>
+                </label>
+                <label class="form-box" for="phone"
+                  >Телефон
+                  <span class="input-field">
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      maxlength="12"
+                      placeholder="Введіть номер починаючи з '380'"
+                    />
+                    <svg>
+                      <use href="./sprite.svg#phone2"></use>
+                    </svg>
+                  </span>
+                </label>
+                <label class="form-box" for="email"
+                  >Ім'я
+                  <span class="input-field">
+                    <input type="email" id="email" name="email" />
+                    <svg>
+                      <use href="./sprite.svg#email"></use>
+                    </svg>
+                  </span>
+                </label>
+                <label class="form-box" for="comment">
+                  <span class="input-field">Коментар</span>
+                  <textarea
+                    class="comment-box"
+                    name="comment"
+                    id="comment"
+                    rows="5"
+                    placeholder="Введіть текст"
+                  ></textarea>
+                </label>
+                <label class="form-license" for="checkbox">
+                  <input
+                    class="checkbox hidden"
+                    id="checkbox"
+                    type="checkbox"
+                    required
+                  />
+                  <span class="licence-mark">
+                    <svg>
+                      <use href="./sprite.svg#mark"></use>
+                    </svg>
+                  </span>
+                  <span class="licence-text">
+                    Погоджуюся з розсилкою та приймаю
+                    <a class="licence-link" href="#">Умови договору</a>
+                  </span></label
+                ><button class="submit-btn" type="submit">Відправити</button>
+              </form>
             </div>
           </div>
         </div>
@@ -460,6 +525,24 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="tg-form">
+          <p>підпишіться на розсилку</p>
+          <form class="form-box-tg" name="tg-form">
+            <input
+              name="tg-email"
+              class="tg-email"
+              type="email"
+              id="tg-email"
+              placeholder="E-mail"
+              required
+            /><button>
+              Підписатися
+              <svg>
+                <use href="./sprite.svg#tg"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>

@@ -28,6 +28,7 @@ p {
   --font-family-primary: "Roboto", sans-serif;
   --color-sprite1: #afb1b8;
   --color-icon: #f5f4fa;
+  --color-mark-active: #188ce8;
 }
 
 body {
@@ -253,6 +254,65 @@ nav {
   background-color: var(--color-brand);
 }
 
+.tg-form {
+  margin-left: 93px;
+}
+.tg-form p {
+  color: var(--color-primary-light);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+.form-box-tg {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.tg-email {
+  width: 358px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(33, 150, 243, 0);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  padding: 15px 16px;
+}
+.tg-form button {
+  width: 200px;
+  height: 50px;
+
+  border: none;
+
+  border-radius: 4px;
+  background: var(--color-brand);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+
+  color: var(--color-primary-light);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.96px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.tg-form svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--color-primary-light);
+}
+
 .main {
   background-color: var(--color-primary-light);
 }
@@ -281,7 +341,7 @@ nav {
   margin: auto;
   margin-bottom: 30px;
 }
-.section-first button {
+.first-button {
   background-color: var(--color-brand);
   color: var(--color-primary-light);
   cursor: pointer;
@@ -297,7 +357,13 @@ nav {
   display: flex;
   justify-content: center;
   margin: auto;
+  border: none;
 }
+.first-button:hover,
+.first-button:active {
+  background-color: var(--color-mark-active);
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -339,7 +405,7 @@ nav {
   visibility: visible;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal button {
+.modal-button {
   position: fixed;
   top: 8px;
   right: 8px;
@@ -361,6 +427,169 @@ nav {
 .modal svg {
   width: 18px;
   height: 18px;
+}
+
+.modal-form {
+  width: 448px;
+}
+.modal h2 {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin: 0 0 12px 0;
+}
+.form-box {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-secondary);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  align-items: flex-start;
+}
+.input-field {
+  position: relative;
+  margin-top: 4px;
+}
+.input-field input {
+  width: 448px;
+  height: 40px;
+  border-radius: 4px;
+  padding-left: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-field svg {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: block;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-field:hover input,
+.input-field:focus input,
+.input-field:hover svg,
+.input-field:focus svg,
+.comment-box:hover,
+.comment-box:focus {
+  border-color: var(--color-brand);
+  fill: var(--color-brand);
+}
+.comment-box {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 0;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  resize: none;
+  color: var(--color-primary);
+  font-size: 14px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-license {
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.714;
+  letter-spacing: 0.42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding: 0;
+}
+.licence-mark {
+  width: 16px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+
+  border: 2px solid var(--color-primary);
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.licence-mark svg {
+  fill: var(--color-primary);
+
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:checked + .licence-mark svg {
+  opacity: 1;
+}
+.checkbox:checked + .licence-mark {
+  border: var(--color-brand);
+}
+
+.licence-mark:hover,
+.licence-mark:focus,
+.licence-mark:active {
+  border-color: var(--color-brand);
+}
+.licence-text {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.714;
+  letter-spacing: 0.42px;
+}
+.licence-link {
+  color: var(--color-brand);
+
+  text-decoration-line: underline;
+}
+
+.submit-btn {
+  color: var(--color-primary-light);
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.96px;
+
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  background: var(--color-brand);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+
+  margin: 0px auto 40px;
+}
+.submit-btn:hover,
+.submit-btn:active,
+.submit-btn:focus {
+  background-color: var(--color-mark-active);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .section-second {
