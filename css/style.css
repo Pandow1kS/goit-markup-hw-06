@@ -283,6 +283,8 @@ nav {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   padding: 15px 16px;
+
+  color: var(--color-primary-light);
 }
 .tg-form button {
   width: 200px;
