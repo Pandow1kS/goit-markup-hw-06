@@ -255,7 +255,9 @@ nav {
 }
 
 .tg-form {
-  margin-left: 93px;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 0;
 }
 .tg-form p {
   color: var(--color-primary-light);
@@ -269,7 +271,6 @@ nav {
 }
 .form-box-tg {
   display: flex;
-  gap: 12px;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -289,6 +290,7 @@ nav {
 .tg-form button {
   width: 200px;
   height: 50px;
+  margin-left: 12px;
 
   border: none;
 
@@ -430,6 +432,10 @@ nav {
   width: 18px;
   height: 18px;
 }
+.modal-button:focus,
+.modal-button:hover {
+  fill: var(--color-brand);
+}
 
 .modal-form {
   width: 448px;
@@ -473,15 +479,7 @@ nav {
   display: block;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-field:hover input,
-.input-field:focus input,
-.input-field:hover svg,
-.input-field:focus svg,
-.comment-box:hover,
-.comment-box:focus {
-  border-color: var(--color-brand);
-  fill: var(--color-brand);
-}
+
 .comment-box {
   width: 448px;
   height: 120px;
@@ -496,6 +494,19 @@ nav {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.input-field input:hover,
+.input-field input:focus,
+.comment-box:hover,
+.comment-box:focus {
+  border-color: var(--color-brand);
+  cursor: pointer;
+}
+.input-field input:hover + svg,
+.input-field input:focus + svg {
+  fill: var(--color-brand);
+}
+
 .form-license {
   color: var(--color-secondary);
   font-size: 14px;
@@ -546,6 +557,9 @@ nav {
 }
 .checkbox:checked + .licence-mark {
   border: var(--color-brand);
+}
+.checkbox:focus + .licence-mark {
+  border-color: var(--color-brand);
 }
 
 .licence-mark:hover,
